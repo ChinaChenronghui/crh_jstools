@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用函数</title>
+    <script src="js/tools.min.js"></script>
+</head>
+<body>
+
+<ul>
+    <li onclick="clickEvent(1);">js生成随机字符串</li>
+    <li onclick="clickEvent(2);">生成uuuid</li>
+    <li onclick="clickEvent(3);">格式化金钱</li>
+    <li onclick="clickEvent(4);">字符串截取</li>
+</ul>
+
+<script type='text/javascript'>
+        function clickEvent(type){
+            switch (type){
+                case 1:
+                    alert(crh.randomWorld(true,3,32));
+                    break;
+                case 2:
+                    crh.createUUid();
+                    break;
+                case 3:
+                    var money=crh.convert_money(12345678.1234,0);
+                      //  console.log(money);
+                    break;
+                case 4:
+                    var cutstr=crh.cutStr("陈荣辉是大海哥撒打发",5);
+                      console.log(cutstr);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
+
+    /**文档加载顺序
+     *
+     *  window.onload = function(){}
+     $(window).load(function(){
+        alert("jquery===》window load" );
+    })
+
+     $(document).ready(function () {
+        alert("jquery====》document ready");
+    });
+
+     $(function(){
+        alert("jquery====》document onload");
+    });
+
+     function aaa(){
+        alert("静态标签====》onload");
+    }
+     * */
+
+</script>
+
+
+</body>
+</html>
